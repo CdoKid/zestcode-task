@@ -3,6 +3,10 @@ import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { Head } from '@inertiajs/vue3';
 import AddItem from '@/Pages/Items/AddItem.vue'
 import ItemsList from '@/Pages/Items/ItemsList.vue'
+
+defineProps({
+    items: Object,
+  });
 </script>
 
 <template>
@@ -19,9 +23,8 @@ import ItemsList from '@/Pages/Items/ItemsList.vue'
                 </div>
 
                 <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
-                    <ItemsList class="max-w-xl"/>
+                    <ItemsList :items="items" class="max-w-xl"/>
                 </div>
-
             </div>
         </div>
     </AuthenticatedLayout>

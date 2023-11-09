@@ -4,10 +4,6 @@ import InputLabel from '@/Components/InputLabel.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
 import { useForm } from '@inertiajs/vue3';
-import { ref } from 'vue';
-
-const nameInput = ref(null);
-const currentPasswordInput = ref(null);
 
 const form = useForm({
     name: '',
@@ -16,7 +12,7 @@ const form = useForm({
 });
 
 const addItem = () => {
-    form.put(route('item.add'), {
+    form.post(route('item.store'), {
         onFinish: () => form.reset(),
     });
 };
@@ -52,9 +48,8 @@ const addItem = () => {
                     type="text"
                     class="mt-1 block w-full"
                     v-model="form.desc"
-                    required
                     autofocus
-                    autocomplete="name"
+                    autocomplete="desc"
                 />
 
                 <InputError class="mt-2" :message="form.errors.desc" />
@@ -67,9 +62,8 @@ const addItem = () => {
                     type="text"
                     class="mt-1 block w-full"
                     v-model="form.price"
-                    required
                     autofocus
-                    autocomplete="name"
+                    autocomplete="price"
                 />
 
                 <InputError class="mt-2" :message="form.errors.price" />
