@@ -6,7 +6,7 @@ import ItemsList from '@/Pages/Items/ItemsList.vue'
 import ButtonColorUtils from '@/utils/ButtonColorUtils';
 
 const isLocalhost = ButtonColorUtils.isLocalhost();
-const randomColor = isLocalhost ? ButtonColorUtils.getRandomColor(): 'gray' ;
+const randomColor = isLocalhost ? ButtonColorUtils.getRandomColor(): 'bg-green-500';
 
 defineProps({
     items: Object,

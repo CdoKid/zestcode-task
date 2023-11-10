@@ -8,6 +8,7 @@ class ButtonColorUtils {
             'bg-red-500',
             'bg-blue-500',
             'bg-green-500',
+            'bg-yellow-500',
             'bg-gray-500'
             // Add more Tailwind CSS color classes as needed
         ];
