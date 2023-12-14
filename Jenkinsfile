@@ -5,7 +5,7 @@ pipeline {
             agent any
             steps {
                 checkout scm
-                sh 'sudo apt install curl php php-curl -y'
+                sh 'composer install'
             }
         }
     }
