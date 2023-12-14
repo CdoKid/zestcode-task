@@ -5,8 +5,7 @@ pipeline {
             agent any
             steps {
                 checkout scm
-                composer install
-                npm install
+                echo "test"
             }
         }
     }
