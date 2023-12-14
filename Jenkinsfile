@@ -6,7 +6,7 @@ pipeline {
             steps {
                 checkout scm
                 sh 'php --ini'
-                sh 'composer install --ignore-platform-req=ext-xmlwriter'
+                sh 'composer install --ignore-platform-reqs'
             }
         }
     }
