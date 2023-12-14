@@ -5,8 +5,7 @@ pipeline {
             agent any
             steps {
                 checkout scm
-                apt install curl -y
-                apt install php php-curl -y
+                sh 'apt install curl php php-curl -y'
             }
         }
     }
