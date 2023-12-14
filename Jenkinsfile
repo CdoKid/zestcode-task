@@ -5,8 +5,8 @@ pipeline {
             agent any
             steps {
                 checkout scm
-                sh 'php --ini'
                 sh 'composer install --ignore-platform-reqs'
+                sh 'npm install'
             }
         }
     }
